@@ -4,8 +4,6 @@ import torch.nn.functional as F
 from torch import linalg as LA
 
 
-
-
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -134,7 +132,7 @@ class ResNetTiny(nn.Module):
 
 
 
-
+#Model definitions
 def ResNet18(nclass, scale, channels, **kwargs):
     return ResNet(BasicBlock, [2, 2, 2, 2], nclass, scale, channels, **kwargs)
 

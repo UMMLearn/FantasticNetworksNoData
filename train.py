@@ -12,45 +12,20 @@ from datetime import datetime
 import numpy as np
 import copy
 
-
 from torchvision import datasets, transforms, models
-from torchvision.models import resnet50, ResNet50_Weights, resnet18, ResNet18_Weights, shufflenet_v2_x2_0, ShuffleNet_V2_X2_0_Weights, convnext_tiny, ConvNeXt_Tiny_Weights, densenet121, DenseNet121_Weights
-from torch.hub import load_state_dict_from_url
-from torch.utils.model_zoo import load_url as load_state_dict_from_url
-#from torch.utils.tensorboard import SummaryWriter
 
-#from models.wideresnet import *
 from models.resnet import *
-#from models.simple import *
-#from models.densenet import *
-#from models.resnext import *
-#from models.allconv import *
-#from models.wideresnet import *
+
 from loss_utils import *
 from utils import *
 
 from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
 
-# import augmentations
-# from color_jitter import *
-# from diffeomorphism import *
-# from rand_filter import *
 
-# from torch.distributions import Dirichlet, Beta
-# from einops import rearrange, repeat
-# from opt_einsum import contract
-
-#from utils_confusion import *
-#from utils_augmix import *
-#from utils_prime import *
-#from trades import trades_loss
+#Foolbox required
 from foolbox import PyTorchModel, accuracy, samples
 from foolbox.attacks import L2DeepFoolAttack
-#from create_data import compute_smooth_data, merge_data, CustomDataSet
 
-#from robustness.datasets import CustomImageNet
-#from robustness.datasets import DATASETS, DataSet, CustomImageNet
-#import smoothers
 
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR + proximity training')
@@ -82,8 +57,6 @@ parser.add_argument('--epochs', type=int, default=100, metavar='N',
                     help='number of epochs to train')
 parser.add_argument('--channel-norm', type=int, default=0,
                     help='whether to use specific whitening transforms per channel')
-
-
 
 
 args = parser.parse_args()
