@@ -8,6 +8,7 @@ https://arxiv.org/abs/2305.15563
 
 To cite our work, please use:
 
+```bibtex
 @misc{dean2023fantastic,
       title={Fantastic DNN Classifiers and How to Identify them without Data}, 
       author={Nathaniel Dean and Dilip Sarkar},
@@ -16,3 +17,7 @@ To cite our work, please use:
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
+    } 
+```
+
+
