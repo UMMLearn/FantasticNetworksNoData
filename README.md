@@ -17,7 +17,6 @@ To cite our work, please use:
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
-    } 
 ```
 
 
